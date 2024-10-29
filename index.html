@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #miliseconds {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .animate {
+            animation: pulse 1s infinite;
+            color: red;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+    <!--Task 1 -->
+    <h1 id="timer">01:00:00</h1>
+    <!-- Task 2 -->
+    <p id="miliseconds" >30:00</p>
+    <button id="startButton" onclick="startTimer()" disabled>Почати знову</button>
+    <script type="module" src="./js/script.js"></script>
+</body>
+</html>
